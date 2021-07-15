@@ -56,6 +56,10 @@ export default class App extends React.Component {
         <TouchableOpacity style={styles.buyBoxButton}>
           <Image source={require('./assets/images/buyBoxButton.png')} style={styles.buyBoxButtonImage}></Image>
         </TouchableOpacity>
+        <View style={styles.titleWrapper}>
+            <Text style={styles.yourBoxesTitle}>Your Boxes</Text>
+            <Image source={require('./assets/images/fullBox.png')} style={styles.yourBoxesImage}></Image>
+          </View>
         <StatusBar style="auto" />
       </View>
     )
@@ -92,7 +96,7 @@ const styles = StyleSheet.create({
   headerWrapper: {
     flexDirection: "row",
     justifyContent: "space-between",
-    paddingTop: 55,
+    paddingTop: 45,
     paddingHorizontal: 20,
     alignItems: "center",
   },
@@ -188,5 +192,17 @@ const styles = StyleSheet.create({
     alignSelf:"center",
     width:190,
     height:51
+  },
+  yourBoxesTitle:{
+    fontFamily: 'SFProRoundedBold',
+    fontSize: 34,
+    paddingLeft:20,
+    paddingTop: 30,
+  },
+  yourBoxesImage:{
+    marginTop: 35,
+    marginLeft: 10,
+    width: 25,
+    height: 25
   },
 });
