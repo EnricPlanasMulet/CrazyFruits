@@ -4587,7 +4587,7 @@
   dependencies:
     "asap" "~2.0.6"
 
-"prop-types@^15.5.10", "prop-types@^15.5.8", "prop-types@^15.6.0", "prop-types@^15.6.2", "prop-types@^15.7.2":
+"prop-types@^15.5.8", "prop-types@^15.6.0", "prop-types@^15.6.2", "prop-types@^15.7.2":
   "integrity" "sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ=="
   "resolved" "https://registry.npmjs.org/prop-types/-/prop-types-15.7.2.tgz"
   "version" "15.7.2"
@@ -4674,19 +4674,12 @@
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-17.0.2.tgz"
   "version" "17.0.2"
 
-"react-native-collapse-view@^1.0.0", "react-native-collapse-view@1.0.0":
-  "integrity" "sha1-b3MKzrLs/uzG/4smW6BcSu5jou8="
-  "resolved" "https://registry.npmjs.org/react-native-collapse-view/-/react-native-collapse-view-1.0.0.tgz"
-  "version" "1.0.0"
+"react-native-modal-dropdown@^1.0.1":
+  "integrity" "sha512-7QAuKvdsIMvz5N2FnRGrZKb+JR3bYFFelONdmfwp1UW3acOyrhF32H06aMD09x2PdBz3VaR5+3iApt9FYClktQ=="
+  "resolved" "https://registry.npmjs.org/react-native-modal-dropdown/-/react-native-modal-dropdown-1.0.1.tgz"
+  "version" "1.0.1"
   dependencies:
-    "prop-types" "^15.5.10"
-
-"react-native-ios-picker@^1.0.0":
-  "integrity" "sha512-/QDeij2wxGWwPD9EaFqHXdfB7zQsxHpknBqH5Mxmnetj3zQPZ4OzQf2k+WM+9MYXZUyIsMKGb2NBvHP5MIkLOA=="
-  "resolved" "https://registry.npmjs.org/react-native-ios-picker/-/react-native-ios-picker-1.0.0.tgz"
-  "version" "1.0.0"
-  dependencies:
-    "react-native-collapse-view" "1.0.0"
+    "prop-types" "^15.6.0"
 
 "react-native-safe-area-context@3.2.0":
   "integrity" "sha512-k2Nty4PwSnrg9HwrYeeE+EYqViYJoOFwEy9LxL5RIRfoqxAq/uQXNGwpUg2/u4gnKpBbEPa9eRh15KKMe/VHkA=="

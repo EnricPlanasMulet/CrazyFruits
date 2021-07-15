@@ -2,7 +2,8 @@ import { StatusBar } from 'expo-status-bar';
 import * as React from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import * as Font from 'expo-font';
-
+import ModalDropdown from 'react-native-modal-dropdown';
+import { style, text } from 'dom-helpers';
 
 export default class App extends React.Component {
   state = {
@@ -43,9 +44,18 @@ export default class App extends React.Component {
           </View>
           <Text style={styles.shopSelectorTitle}>Select a shop</Text>
         </View>
-
-
-        <Text>Open up App.js to start working on your app!</Text>
+        <View style={styles.dropdownBackground}>
+          <ModalDropdown textStyle={styles.dropdownText}
+            dropdownStyle={styles.dropdownShopStyle}
+            dropdownTextStyle={styles.dropdownOptionsTextStyle}
+            defaultValue={"Select a shop...                                                                                "}
+            saveScrollPosition={false}
+            options={data} isFullWidth={true} />
+          <Image source={require('./assets/images/chevron.forward.png')} style={styles.dropdownImage}></Image>
+        </View>
+        <TouchableOpacity style={styles.buyBoxButton}>
+          <Image source={require('./assets/images/buyBoxButton.png')} style={styles.buyBoxButtonImage}></Image>
+        </TouchableOpacity>
         <StatusBar style="auto" />
       </View>
     )
@@ -69,6 +79,10 @@ const options = [{ value: 'LLIMONA', label: 'Lemon' },
 { value: 'NOU', label: 'Nut' },
 ];
 
+const data = ['Frutas de portugal                                                                                ',
+  'Frutas de ibiza                                                                                ',
+  'Condis BCN                                                                                ',
+  'Agricultura can Tria                                                                                ']
 
 const styles = StyleSheet.create({
   container: {
@@ -120,8 +134,59 @@ const styles = StyleSheet.create({
     height: 25
   },
   shopSelectorTitle: {
+    width: '80%',
     paddingTop: 15,
     fontFamily: "SFProRoundedRegular",
     fontSize: 18,
+  },
+  dropdownBackground: {
+    backgroundColor: '#E8E8E9',
+    width: 374,
+    height: 36,
+    marginTop: 10,
+    marginLeft: 20,
+    marginRight: 20,
+    borderRadius: 10,
+    flexDirection: "row",
+
+  },
+  dropdownImage: {
+    position: "absolute",
+    marginTop: 15,
+    marginLeft: 340,
+    width: 14,
+    height: 8
+  },
+
+  dropdownText: {
+    paddingLeft: 20,
+    marginTop: 9,
+    fontFamily: "SFProRoundedLight",
+    fontSize: 17,
+  },
+  dropdownShopStyle: {
+    borderTopLeftRadius: 0,
+    borderTopRightRadius: 0,
+    borderRadius: 10,
+    backgroundColor: '#E8E8E9',
+    borderTopColor: '#E8E8E9',
+    width: 374,
+  },
+  dropdownOptionsTextStyle: {
+    fontFamily: "SFProRoundedLight",
+    fontSize: 17,
+    color: '#000',
+    marginLeft: 4,
+    marginBottom: 4,
+    marginRight: 4,
+    backgroundColor: '#E8E8E9',
+    borderRadius: 10,
+    textAlign: 'center'
+  },
+  buyBoxButtonImage:{
+    marginTop:30,
+    alignSelf:"center",
+    width:190,
+    height:51
   },
 });
