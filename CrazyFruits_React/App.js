@@ -8,6 +8,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { style, text } from 'dom-helpers';
 import HomePage from './components/HomePage';
+import AppLoading from 'expo-app-loading';
 
 const Stack = createStackNavigator();
 
@@ -32,17 +33,21 @@ export default class App extends React.Component {
   }
 
   render() {
-    return (
-      <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen name="HomePage" component={HomePage} options={
-            {
-              headerShown: false,
-            }
-          } />
-        </Stack.Navigator>
-      </NavigationContainer>
-    )
+    if (this.state.fontsLoaded) {
+      return (
+        <NavigationContainer>
+          <Stack.Navigator>
+            <Stack.Screen name="HomePage" component={HomePage} options={
+              {
+                headerShown: false,
+              }
+            } />
+          </Stack.Navigator>
+        </NavigationContainer>
+      )
+    } else {
+      return <AppLoading />;
+    }
   }
 }
 
