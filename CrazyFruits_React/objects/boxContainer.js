@@ -35,7 +35,6 @@ const styles = StyleSheet.create({
     },
     container: {
         width: 375,
-        height: 125,
         marginLeft: 20,
         marginTop: 15,
         backgroundColor: '#fff',
@@ -45,6 +44,7 @@ const styles = StyleSheet.create({
         },
         shadowColor: '#000',
         shadowOpacity: 0.1,
+        overflow:"scroll",
     },
     idAndDate: {
         flexDirection: "row",
@@ -79,6 +79,7 @@ const styles = StyleSheet.create({
         height: 14
     },
     city: {
+        marginRight:50,
         marginLeft: 67,
         marginTop: 0,
         fontFamily: "SFProRoundedRegular",
@@ -98,6 +99,7 @@ const styles = StyleSheet.create({
         color: '#000',
     },
     statusImage: {
+        marginRight:50,
         marginBottom: 11,
         marginLeft: 7,
         height: 18,
