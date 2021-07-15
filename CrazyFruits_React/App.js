@@ -24,6 +24,7 @@ export default class App extends React.Component {
       SFProRoundedLight: require('./assets/fonts/SF-Pro-Rounded-Light.otf'),
       SFProTextRegular: require('./assets/fonts/SF-Pro-Text-Regular.otf'),
       SFProTextMedium: require('./assets/fonts/SF-Pro-Text-Medium.otf'),
+      SFProRoundedMedium: require('./assets/fonts/SF-Pro-Rounded-Semibold.otf'),
     });
     this.setState({ fontsLoaded: true });
   }

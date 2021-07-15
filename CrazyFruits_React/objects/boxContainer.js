@@ -2,15 +2,13 @@ import 'react-native-gesture-handler';
 import * as React from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import boxData from '../data/boxData';
-import { opacity } from 'jimp';
-
-
 
 export default function BoxesContainers() {
     return (
-        <View>
-            {boxData.map((props) => (
-                <View style={styles.container}>
+        <View style={styles.wrapper}>
+            {boxData.map((props, id) => (
+                <TouchableOpacity key={id} style={styles.container} >
+                    <Image source={require('../assets/images/rightArrow.png')} style={styles.arrow} />
                     <View style={styles.idAndDate}>
                         <Text style={styles.idAndDateText}>Box #{props.boxID} - </Text>
                         <Text style={styles.idAndDateText}>{props.date}</Text>
@@ -20,18 +18,24 @@ export default function BoxesContainers() {
                     </View>
                     <Text style={styles.city}>{props.city}, {props.zipCode}</Text>
                     <Text style={styles.city}>{props.direction}</Text>
-                    <Text style={styles.deliveryText}>{props.status}</Text>
-                </View>
+
+                    <View style={styles.statusWrapper}>
+                        <Text style={styles.deliveryText}>{props.status}</Text>
+                        <Image source={props.image} style={styles.statusImage} />
+                    </View>
+                </TouchableOpacity>
             )
             )}
         </View>
     )
 }
 const styles = StyleSheet.create({
-
+    wrapper: {
+        marginBottom: 30
+    },
     container: {
         width: 375,
-        height: 116,
+        height: 125,
         marginLeft: 20,
         marginTop: 15,
         backgroundColor: '#fff',
@@ -44,42 +48,60 @@ const styles = StyleSheet.create({
     },
     idAndDate: {
         flexDirection: "row",
-        marginLeft: 58,
+        marginLeft: 67,
         marginTop: 16,
+        marginBottom: 5
     },
     idAndDateText: {
-        fontFamily: "SFProTextRegular",
-        fontSize: 13,
+        fontFamily: "SFProRoundedRegular",
+        fontSize: 15,
         color: '#8A8A8E',
     },
     square: {
-        marginLeft: -43,
-        height: 32,
-        width: 32,
+        marginLeft: -52,
+        height: 40,
+        width: 40,
         position: "absolute",
         backgroundColor: '#E8E8E9',
         borderRadius: 6,
-        alignItems:"center",
-
+        alignItems: "center",
     },
     box: {
-        marginVertical: '25%',
-        width: 16,
-        height: 16
+        marginVertical: '20%',
+        width: 25,
+        height: 25
     },
-    city:{
-        marginLeft:58,
-        marginTop:4,
-        fontFamily: "SFProTextRegular",
-        fontSize: 15,
+    arrow: {
+        position: "absolute",
+        marginLeft: 350,
+        marginTop: 55,
+        width: 8,
+        height: 14
+    },
+    city: {
+        marginLeft: 67,
+        marginTop: 0,
+        fontFamily: "SFProRoundedRegular",
+        fontSize: 18,
         color: '#000',
     },
-    deliveryText:{
-        marginLeft:58,
-        marginTop:4,
-        fontFamily: "SFProTextMedium",
-        fontSize: 15,
+    statusWrapper: {
+        flexDirection: "row",
+        alignItems: "center",
+    },
+    deliveryText: {
+        marginLeft: 67,
+        marginTop: 5,
+        marginBottom: 15,
+        fontFamily: "SFProRoundedMedium",
+        fontSize: 18,
         color: '#000',
+    },
+    statusImage: {
+        marginBottom: 11,
+        marginLeft: 7,
+        height: 18,
+        width: 18,
     },
 });
 

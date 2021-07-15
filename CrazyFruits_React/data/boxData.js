@@ -1,22 +1,24 @@
 const boxData = [
     {
         id: "ajstw2013",
-        boxID: 0,
+        boxID: 4,
         date: "13/07/21",
         city: "Sant Vicenç de Montalt",
         zipCode: "08394",
         direction: "Ginesta 54",
         status: "Currently shipping",
+        image: require('../assets/images/truck.png'),
         fruits:['Apple','Apple','Apple','Apple','Apple','Apple','Apple','Apple']
     },
     {
         id: "aptcv4512",
-        boxID: 1,
+        boxID: 3,
         date: "13/07/21",
         city: "Sant Vicenç de Montalt",
         zipCode: "08394",
         direction: "Ginesta 54",
         status: "Delivered",
+        image: require('../assets/images/checkmark.png'),
         fruits:['Apple','Apple','Apple','Apple','Apple','Apple','Apple','Apple']
     },
     {
@@ -27,26 +29,29 @@ const boxData = [
         zipCode: "08394",
         direction: "Ginesta 54",
         status: "Delivered",
+        image: require('../assets/images/checkmark.png'),
         fruits:['Apple','Apple','Apple','Apple','Apple','Apple','Apple','Apple']
     },
     {
         id: "atwns2381",
-        boxID: 3,
+        boxID: 1,
         date: "13/07/21",
         city: "Sant Vicenç de Montalt",
         zipCode: "08394",
         direction: "Ginesta 54",
         status: "Delivered",
+        image: require('../assets/images/checkmark.png'),
         fruits:['Apple','Apple','Apple','Apple','Apple','Apple','Apple','Apple']
     },
     {
         id: "pleusy7283",
-        boxID: 4,
+        boxID: 0,
         date: "13/07/21",
         city: "Sant Vicenç de Montalt",
         zipCode: "08394",
         direction: "Ginesta 54",
         status: "Delivered",
+        image: require('../assets/images/checkmark.png'),
         fruits:['Apple','Apple','Apple','Apple','Apple','Apple','Apple','Apple']
     },
 ];
