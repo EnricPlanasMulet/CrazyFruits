@@ -78,8 +78,6 @@ const styles = StyleSheet.create({
         width: 40,
         height: 40,
         borderRadius: 40,
-        borderWidth: 1,
-        borderColor: '#E8E8E9',
     },
     userName: {
         marginLeft: 10,
