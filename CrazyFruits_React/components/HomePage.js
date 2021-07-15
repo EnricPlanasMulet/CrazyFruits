@@ -61,12 +61,12 @@ export default HomePage = () => {
     )
 }
 
-const shops = ['Frutas de portugal                                                                                ',
-    'Frutas de ibiza                                                                                              ',
-    'Frutas de Sant Vicenç                                                                                        ',
-    'Frutas de Vilassar                                                                                           ',
-    'Bonpreu                                                                                                      ',
-    'Esclat                                                                                                       '];
+const shops = ['Frutas de portugal                                                                                '.toUpperCase(),
+    'Frutas de ibiza                                                                                              '.toUpperCase(),
+    'Frutas de Sant Vicenç                                                                                        '.toUpperCase(),
+    'Frutas de Vilassar                                                                                           '.toUpperCase(),
+    'Bonpreu                                                                                                      '.toUpperCase(),
+    'Esclat                                                                                                       '.toUpperCase()];
 
 const styles = StyleSheet.create({
     container: {
