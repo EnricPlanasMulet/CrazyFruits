@@ -2,8 +2,10 @@ import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
 import * as React from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
-
+import BoxesContainers from '../objects/boxContainer';
 import ModalDropdown from 'react-native-modal-dropdown';
+
+import { call } from 'react-native-reanimated';
 
 
 
@@ -13,16 +15,16 @@ export default HomePage = () => {
         <View style={styles.container}>
 
             {/*Background Image*/}
-            <Image source={require('../assets/images/backgroundVector.png')} style={styles.backgroundForm}></Image>
+            <Image source={require('../assets/images/backgroundVector.png')} style={styles.backgroundForm}/>
 
             {/*Header*/}
             <View style={styles.headerWrapper}>
                 <View style={styles.userWrapper}>
-                    <Image source={require('../assets/images/fotoLinkedIn.jpg')} style={styles.profileImage}></Image>
+                    <Image source={require('../assets/images/fotoLinkedIn.jpg')} style={styles.profileImage}/>
                     <Text style={styles.userName}>Enric Planas Mulet</Text>
                 </View>
                 <TouchableOpacity style={styles.settingsButton}>
-                    <Image source={require('../assets/images/settings.png')} style={styles.settingsImage}></Image>
+                    <Image source={require('../assets/images/settings.png')} style={styles.settingsImage}/>
                 </TouchableOpacity>
             </View>
 
@@ -30,7 +32,7 @@ export default HomePage = () => {
             <View style={styles.buyBoxWrapper}>
                 <View style={styles.titleWrapper}>
                     <Text style={styles.buyBoxTitle}>Buy a new box</Text>
-                    <Image source={require('../assets/images/emptyBox.png')} style={styles.buyBoxImage}></Image>
+                    <Image source={require('../assets/images/emptyBox.png')} style={styles.buyBoxImage}/>
                 </View>
                 <Text style={styles.shopSelectorTitle}>Select a shop</Text>
             </View>
@@ -41,17 +43,18 @@ export default HomePage = () => {
                     defaultValue={"Select a shop...                                                                                "}
                     saveScrollPosition={false}
                     options={shops} isFullWidth={true} />
-                <Image source={require('../assets/images/chevron.forward.png')} style={styles.dropdownImage}></Image>
+                <Image source={require('../assets/images/chevron.forward.png')} style={styles.dropdownImage}/>
             </View>
             <TouchableOpacity style={styles.buyBoxButton}>
-                <Image source={require('../assets/images/buyBoxButton.png')} style={styles.buyBoxButtonImage}></Image>
+                <Image source={require('../assets/images/buyBoxButton.png')} style={styles.buyBoxButtonImage}/>
             </TouchableOpacity>
 
             {/*Your Boxes*/}
             <View style={styles.titleWrapper}>
                 <Text style={styles.yourBoxesTitle}>Your Boxes</Text>
-                <Image source={require('../assets/images/fullBox.png')} style={styles.yourBoxesImage}></Image>
+                <Image source={require('../assets/images/fullBox.png')} style={styles.yourBoxesImage}/>
             </View>
+            <BoxesContainers/>
             <StatusBar style="auto" />
 
         </View>
@@ -184,5 +187,8 @@ const styles = StyleSheet.create({
         marginLeft: '40%',
         width: 271,
         height: 610
+    },
+    boxesList:{
+
     },
 });
