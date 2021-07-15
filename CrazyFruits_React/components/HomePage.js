@@ -4,11 +4,7 @@ import * as React from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView } from 'react-native';
 import BoxesContainers from '../objects/boxContainer';
 import ModalDropdown from 'react-native-modal-dropdown';
-
-import { call } from 'react-native-reanimated';
-
-
-
+import shopData from '../data/shopsData';
 
 export default HomePage = () => {
     return (
@@ -42,7 +38,7 @@ export default HomePage = () => {
                         dropdownTextStyle={styles.dropdownOptionsTextStyle}
                         defaultValue={"Select a shop...                                                                                "}
                         saveScrollPosition={false}
-                        options={shops} isFullWidth={true} />
+                        options={shopData} isFullWidth={true} />
                     <Image source={require('../assets/images/chevron.forward.png')} style={styles.dropdownImage} />
                 </View>
                 <TouchableOpacity style={styles.buyBoxButton}>
@@ -60,13 +56,6 @@ export default HomePage = () => {
         </View>
     )
 }
-
-const shops = ['Frutas de portugal                                                                                '.toUpperCase(),
-    'Frutas de ibiza                                                                                              '.toUpperCase(),
-    'Frutas de Sant Vicenç                                                                                        '.toUpperCase(),
-    'Frutas de Vilassar                                                                                           '.toUpperCase(),
-    'Bonpreu                                                                                                      '.toUpperCase(),
-    'Esclat                                                                                                       '.toUpperCase()];
 
 const styles = StyleSheet.create({
     container: {
@@ -89,7 +78,7 @@ const styles = StyleSheet.create({
         width: 40,
         height: 40,
         borderRadius: 40,
-        borderWidth:1,
+        borderWidth: 1,
         borderColor: '#E8E8E9',
     },
     userName: {
