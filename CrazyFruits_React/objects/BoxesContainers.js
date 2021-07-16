@@ -1,7 +1,7 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
-import boxData from '../data/BoxData';
+import boxData from '../data/boxData';
 
 
 export default function BoxesContainers({ route,navigation }) {

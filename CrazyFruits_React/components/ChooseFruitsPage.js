@@ -4,7 +4,7 @@ import * as React from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView } from 'react-native';
 import BoxesContainers from '../objects/BoxesContainers';
 import ModalDropdown from 'react-native-modal-dropdown';
-import shopData from '../data/ShopsData';
+import shopData from '../data/shopData';
 
 export default ChooseFruitsPage = () => {
     return (
