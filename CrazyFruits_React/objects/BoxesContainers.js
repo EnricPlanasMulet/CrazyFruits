@@ -3,11 +3,17 @@ import * as React from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import boxData from '../data/boxData';
 
-export default function BoxesContainers() {
+
+export default function BoxesContainers({ route,navigation }) {
     return (
         <View style={styles.wrapper}>
             {boxData.map((props, id) => (
-                <TouchableOpacity key={id} style={styles.container} >
+                <TouchableOpacity
+                    key={id}
+                    onPress={() => navigation.navigate('BoxResume',{
+                        box: props
+                    })}
+                    style={styles.container}>
                     <Image source={require('../assets/images/rightArrow.png')} style={styles.arrow} />
                     <View style={styles.idAndDate}>
                         <Text style={styles.idAndDateText}>Box #{props.boxID} - </Text>
@@ -24,8 +30,7 @@ export default function BoxesContainers() {
                         <Image source={props.image} style={styles.statusImage} />
                     </View>
                 </TouchableOpacity>
-            )
-            )}
+            ))}
         </View>
     )
 }
@@ -44,7 +49,6 @@ const styles = StyleSheet.create({
         },
         shadowColor: '#000',
         shadowOpacity: 0.1,
-        overflow:"scroll",
     },
     idAndDate: {
         flexDirection: "row",
@@ -79,7 +83,7 @@ const styles = StyleSheet.create({
         height: 14
     },
     city: {
-        marginRight:50,
+        marginRight: 50,
         marginLeft: 67,
         marginTop: 0,
         fontFamily: "SFProRoundedRegular",
@@ -99,7 +103,7 @@ const styles = StyleSheet.create({
         color: '#000',
     },
     statusImage: {
-        marginRight:50,
+        marginRight: 50,
         marginBottom: 11,
         marginLeft: 7,
         height: 18,

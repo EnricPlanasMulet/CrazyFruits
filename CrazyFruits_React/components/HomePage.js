@@ -2,11 +2,11 @@ import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
 import * as React from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView } from 'react-native';
-import BoxesContainers from '../objects/boxContainer';
+import BoxesContainers from '../objects/BoxesContainers';
 import ModalDropdown from 'react-native-modal-dropdown';
 import shopData from '../data/shopsData';
 
-export default HomePage = () => {
+export default HomePage = ({navigation}) => {
     return (
         <View style={styles.container}>
             {/*Background Image*/}
@@ -16,7 +16,9 @@ export default HomePage = () => {
                 {/*Header*/}
                 <View style={styles.headerWrapper}>
                     <View style={styles.userWrapper}>
+                        <View style={styles.profileShadow}>
                         <Image source={require('../assets/images/fotoLinkedIn.jpg')} style={styles.profileImage} />
+                        </View>
                         <Text style={styles.userName}>Enric Planas Mulet</Text>
                     </View>
                     <TouchableOpacity style={styles.settingsButton}>
@@ -41,7 +43,7 @@ export default HomePage = () => {
                         options={shopData} isFullWidth={true} />
                     <Image source={require('../assets/images/chevron.forward.png')} style={styles.dropdownImage} />
                 </View>
-                <TouchableOpacity style={styles.buyBoxButton}>
+                <TouchableOpacity style={styles.buyBoxButton} onPress={()=> navigation.navigate('ChooseFruitsPage')}>
                     <Image source={require('../assets/images/buyBoxButton.png')} style={styles.buyBoxButtonImage} />
                 </TouchableOpacity>
 
@@ -50,7 +52,7 @@ export default HomePage = () => {
                     <Text style={styles.yourBoxesTitle}>Your Boxes</Text>
                     <Image source={require('../assets/images/fullBox.png')} style={styles.yourBoxesImage} />
                 </View>
-                <BoxesContainers />
+                <BoxesContainers navigation={navigation}/>
                 <StatusBar style="auto" />
             </ScrollView>
         </View>
@@ -78,6 +80,15 @@ const styles = StyleSheet.create({
         width: 40,
         height: 40,
         borderRadius: 40,
+        shadowOffset: {
+            height: 4,
+        },
+        shadowColor: '#000',
+        shadowOpacity: 0.1,
+        
+    },
+    profileShadow:{
+
     },
     userName: {
         marginLeft: 10,

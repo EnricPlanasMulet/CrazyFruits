@@ -3,12 +3,12 @@ import { StatusBar } from 'expo-status-bar';
 import * as React from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import * as Font from 'expo-font';
-import ModalDropdown from 'react-native-modal-dropdown';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { style, text } from 'dom-helpers';
-import HomePage from './components/HomePage';
 import AppLoading from 'expo-app-loading';
+import HomePage from './components/HomePage';
+import ChooseFruitsPage from './components/ChooseFruitsPage';
+import BoxResume from './components/BoxResume';
 
 const Stack = createStackNavigator();
 
@@ -39,6 +39,16 @@ export default class App extends React.Component {
         <NavigationContainer>
           <Stack.Navigator>
             <Stack.Screen name="HomePage" component={HomePage} options={
+              {
+                headerShown: false,
+              }
+            } />
+            <Stack.Screen name="ChooseFruitsPage" component={ChooseFruitsPage} options={
+              {
+                headerShown: false,
+              }
+            } />
+            <Stack.Screen name="BoxResume" component={BoxResume} options={
               {
                 headerShown: false,
               }

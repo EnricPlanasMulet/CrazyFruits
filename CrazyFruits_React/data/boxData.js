@@ -8,7 +8,19 @@ const boxData = [
         direction: "Ginesta 54",
         status: "Currently shipping",
         image: require('../assets/images/truck.png'),
-        fruits:['Apple','Apple','Apple','Apple','Apple','Apple','Apple','Apple']
+        fruits: [
+            {
+                name: "Apple",
+                expireDays: 20
+            },
+            {
+                name: "Apple",
+                expireDays: 20
+            },
+            {
+                name: "Apple",
+                expireDays: 20
+            },]
     },
     {
         id: "aptcv4512",
@@ -19,7 +31,7 @@ const boxData = [
         direction: "Ginesta 54",
         status: "Delivered",
         image: require('../assets/images/checkmark.png'),
-        fruits:['Apple','Apple','Apple','Apple','Apple','Apple','Apple','Apple']
+        fruits: ["Apple", "Apple"]
     },
     {
         id: "dilay7362",
@@ -30,7 +42,7 @@ const boxData = [
         direction: "Ginesta 54",
         status: "Delivered",
         image: require('../assets/images/checkmark.png'),
-        fruits:['Apple','Apple','Apple','Apple','Apple','Apple','Apple','Apple']
+        fruits: ["Apple", "Apple"]
     },
     {
         id: "atwns2381",
@@ -41,7 +53,7 @@ const boxData = [
         direction: "Ginesta 54",
         status: "Delivered",
         image: require('../assets/images/checkmark.png'),
-        fruits:['Apple','Apple','Apple','Apple','Apple','Apple','Apple','Apple']
+        fruits: ["Apple", "Apple"]
     },
     {
         id: "pleusy7283",
@@ -52,7 +64,7 @@ const boxData = [
         direction: "Ginesta 54",
         status: "Delivered",
         image: require('../assets/images/checkmark.png'),
-        fruits:['Apple','Apple','Apple','Apple','Apple','Apple','Apple','Apple']
+        fruits: ["Apple", "Apple"]
     },
 ];
 
