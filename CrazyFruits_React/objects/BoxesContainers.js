@@ -1,7 +1,7 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
-import boxData from '../data/boxData';
+import boxData from '../data/BoxData';
 
 
 export default function BoxesContainers({ route,navigation }) {
@@ -10,7 +10,7 @@ export default function BoxesContainers({ route,navigation }) {
             {boxData.map((props, id) => (
                 <TouchableOpacity
                     key={id}
-                    onPress={() => navigation.navigate('BoxResume',{
+                    onPress={() => navigation.navigate('BoxSummary',{
                         box: props
                     })}
                     style={styles.container}>

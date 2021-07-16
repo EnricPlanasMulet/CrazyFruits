@@ -11,16 +11,29 @@ const boxData = [
         fruits: [
             {
                 name: "Apple",
-                expireDays: 20
             },
             {
-                name: "Apple",
-                expireDays: 20
+                name: "Banana",
             },
             {
-                name: "Apple",
-                expireDays: 20
-            },]
+                name: "Blueberries",
+            },
+            {
+                name: "Cherries",
+            },
+            {
+                name: "Coconut",
+            },
+            {
+                name: "Grapes",
+            },
+            {
+                name: "Pear",
+            },
+            {
+                name: "Watermelon",
+            },
+        ]
     },
     {
         id: "aptcv4512",
@@ -31,7 +44,32 @@ const boxData = [
         direction: "Ginesta 54",
         status: "Delivered",
         image: require('../assets/images/checkmark.png'),
-        fruits: ["Apple", "Apple"]
+        fruits: [
+            {
+                name: "Apple",
+            },
+            {
+                name: "Banana",
+            },
+            {
+                name: "Blueberries",
+            },
+            {
+                name: "Cherries",
+            },
+            {
+                name: "Coconut",
+            },
+            {
+                name: "Grapes",
+            },
+            {
+                name: "Pear",
+            },
+            {
+                name: "Watermelon",
+            },
+        ]
     },
     {
         id: "dilay7362",
@@ -42,7 +80,32 @@ const boxData = [
         direction: "Ginesta 54",
         status: "Delivered",
         image: require('../assets/images/checkmark.png'),
-        fruits: ["Apple", "Apple"]
+        fruits: [
+            {
+                name: "Apple",
+            },
+            {
+                name: "Banana",
+            },
+            {
+                name: "Blueberries",
+            },
+            {
+                name: "Cherries",
+            },
+            {
+                name: "Coconut",
+            },
+            {
+                name: "Grapes",
+            },
+            {
+                name: "Pear",
+            },
+            {
+                name: "Watermelon",
+            },
+        ]
     },
     {
         id: "atwns2381",
@@ -53,7 +116,32 @@ const boxData = [
         direction: "Ginesta 54",
         status: "Delivered",
         image: require('../assets/images/checkmark.png'),
-        fruits: ["Apple", "Apple"]
+        fruits: [
+            {
+                name: "Apple",
+            },
+            {
+                name: "Banana",
+            },
+            {
+                name: "Blueberries",
+            },
+            {
+                name: "Cherries",
+            },
+            {
+                name: "Coconut",
+            },
+            {
+                name: "Grapes",
+            },
+            {
+                name: "Pear",
+            },
+            {
+                name: "Watermelon",
+            },
+        ]
     },
     {
         id: "pleusy7283",
@@ -64,7 +152,32 @@ const boxData = [
         direction: "Ginesta 54",
         status: "Delivered",
         image: require('../assets/images/checkmark.png'),
-        fruits: ["Apple", "Apple"]
+        fruits: [
+            {
+                name: "Apple",
+            },
+            {
+                name: "Banana",
+            },
+            {
+                name: "Blueberries",
+            },
+            {
+                name: "Cherries",
+            },
+            {
+                name: "Coconut",
+            },
+            {
+                name: "Grapes",
+            },
+            {
+                name: "Pear",
+            },
+            {
+                name: "Watermelon",
+            },
+        ]
     },
 ];
 

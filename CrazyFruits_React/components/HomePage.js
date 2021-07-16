@@ -4,13 +4,14 @@ import * as React from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView } from 'react-native';
 import BoxesContainers from '../objects/BoxesContainers';
 import ModalDropdown from 'react-native-modal-dropdown';
-import shopData from '../data/shopsData';
+import shopData from '../data/ShopsData';
 
 export default HomePage = ({navigation}) => {
     return (
         <View style={styles.container}>
             {/*Background Image*/}
             <Image source={require('../assets/images/backgroundVector.png')} style={styles.backgroundForm} />
+
             <ScrollView contentInsetAdjustmentBehavior="automatic" showsVerticalScrollIndicator={false}>
 
                 {/*Header*/}
@@ -189,7 +190,7 @@ const styles = StyleSheet.create({
         marginTop: '80%',
         marginLeft: '40%',
         width: 271,
-        height: 610
+        height: 610,
     },
     boxList: {
         marginBottom: 30

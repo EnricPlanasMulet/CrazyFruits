@@ -8,7 +8,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import AppLoading from 'expo-app-loading';
 import HomePage from './components/HomePage';
 import ChooseFruitsPage from './components/ChooseFruitsPage';
-import BoxResume from './components/BoxResume';
+import BoxSummary from './components/BoxSummary';
 
 const Stack = createStackNavigator();
 
@@ -48,7 +48,7 @@ export default class App extends React.Component {
                 headerShown: false,
               }
             } />
-            <Stack.Screen name="BoxResume" component={BoxResume} options={
+            <Stack.Screen name="BoxSummary" component={BoxSummary} options={
               {
                 headerShown: false,
               }
